@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <%- include('../partials/head.ejs') %> 
+
+<body>
+
+   <%- include('../partials/headerAdmin.ejs') %> 
+
+   <main class="createMain">
+      <h2>Crear producto</h2>
+      <form class="createForm" action="/products" method="POST" enctype="multipart/form-data">
+         <div class="createInputContainer">
+            <label for="name">Nombre </label>
+            <input type="text" name="name" id="name" required>
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <div class="createImages">
+               <label for="image"> Imagen </label>
+               <input type="file" name="image" id="image" accept=".png, .jpeg, .jpg" multiple required>
+            </div>
+            <label for="type">Tipo de producto</label>
+            <!-- <input type="text" name="type" id="type" required> -->
+            <select name="type">
+               <option value=""> Elegí </option>
+               <option value="planta"> Planta </option>
+               <option value="maceta"> Maceta </option>
+               <option value="cuidados"> Tips y cuidados </option>
+            </select>
+            <label>Tamaño</label>
+            <select name="size">
+               <option value=""> Elegí </option>
+               <option value="small"> S (Small) </option>
+               <option value="medium"> M (Medium) </option>
+               <option value="large"> L (Large) </option>
+               <option value="extra-large"> XL (Extra Large) </option>
+            </select>
+            <label for="price">Precio</label>
+            <input type="number" name="price" id="price" required>
+            <div class="createBenefits">
+               <label for="fees">Cuotas</label>
+               <input type="number" name="fees" id="fees" required>
+               <label>Categoría</label>
+               <select name="category">
+                  <option value=""> Elegí </option>
+                  <option value="visited"> Últimos visitados </option>
+                  <option value="inSale"> En oferta </option>
+                  <option value="featured"> Elegidos del mes </option>
+               </select>
+            </div>
+         </div>
+         <button type="submit"> Guardar </button>
+      </form>
+   </main>
+
+   <%- include('../partials/footer.ejs') %> 
+   
+</body>
+</html>
