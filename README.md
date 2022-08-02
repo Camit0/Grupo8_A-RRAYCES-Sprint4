@@ -1,4 +1,4 @@
-# Grupo8_Index7_A-RRAYCES-Sprint3
+# Grupo8_Index7_A-RRAYCES-Sprint4
 ★ Enlace al tablero de trabajo en el archivo README.md. 
 SPRINT 4  - 
 
